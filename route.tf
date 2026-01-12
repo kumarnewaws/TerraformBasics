@@ -8,3 +8,11 @@ resource "aws_route_table" "DemoBasicRoute" {
     cidr_block = "0.0.0.0/0"
   }
 }
+
+resource "aws_route_table" "DemoBasicPrivateRoute" {
+  vpc_id = aws_vpc.DemoBasicVPC.id
+  tags = {
+    "Name" = "DevRoute-Private"
+  }
+
+}
