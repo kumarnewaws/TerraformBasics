@@ -29,3 +29,12 @@ resource "aws_subnet" "DemoSubnet-2" {
     "Name" = "DevTFSubnet-2"
   }
 }
+
+resource "aws_subnet" "DemoSubnet-4" {
+  vpc_id = aws_vpc.DemoBasicVPC.id
+  cidr_block = "10.25.4.0/24"
+  availability_zone = "ap-south-1a"
+  tags = {
+    "Name" = "DevTFSubnet-4"
+  }
+}
